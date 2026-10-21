@@ -1,0 +1,40 @@
+{
+  "name": "grunkel-led-3211goo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Reversible Grunkel LED-3211GOO Android TV setup: three launcher choices, multilingual guides, offline USB photos and HDMI/USB shortcuts.",
+  "author": {
+    "name": "Denis Gutsuliak (d9911.org)",
+    "email": "admin@d9911.org",
+    "url": "https://t.me/d9911/"
+  },
+  "contributors": [
+    {
+      "name": "Denis Gutsuliak",
+      "email": "admin@d9911.org",
+      "url": "https://t.me/d9911/"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "keywords": [
+    "grunkel",
+    "android-tv",
+    "adb",
+    "python",
+    "projectivy",
+    "plume",
+    "couchy",
+    "usb",
+    "hdmi"
+  ],
+  "scripts": {
+    "help": "python3 scripts/grunkel.py --help",
+    "doctor": "python3 scripts/grunkel.py doctor",
+    "plan": "python3 scripts/grunkel.py plan",
+    "export": "python3 scripts/export-public.py",
+    "verify": "python3 scripts/grunkel.py verify",
+    "check": "python3 scripts/check-project.py"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

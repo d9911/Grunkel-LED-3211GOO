@@ -1,0 +1,39 @@
+Grunkel LED-3211GOO configuration toolkit
+Copyright (C) 2026 Denis Gutsuliak (d9911.org)
+SPDX-License-Identifier: GPL-3.0-or-later
+
+Author: Denis Gutsuliak
+Email: admin@d9911.org
+Contact: https://t.me/d9911/
+
+This project is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This project is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this project. If not, see <https://www.gnu.org/licenses/>.
+
+This notice applies to this project's original scripts, configuration and
+documentation. Third-party applications, Android firmware, Android Platform
+Tools and other independently licensed material retain their own licenses;
+this project does not relicense them. Downloaded binaries are not included
+in the public toolkit archive.
+
+package.json records project metadata and optional Python command aliases.
+Node.js and npm are not required to use the Python toolkit. private: true
+prevents accidental npm publication; it does not restrict GPL permissions.
+
+Public showcase: assets/screenshots contains unedited captures of the tested TV.
+Third-party interfaces, application icons and trademarks keep their respective
+rights; this project does not relicense those elements. The separate optional
+img/satin-teal-copper.jpg was generated with OpenAI image generation for this
+project and is not a screenshot or the active Projectivy wallpaper.
+
+Optional scrcpy and RustDesk retain their own upstream licenses. The public
+archive includes wrapper sources and tool pins, not those third-party binaries.

@@ -1,0 +1,101 @@
+{
+  "name": "Grunkel LED-3211GOO / martin / MT5867 / Android 14",
+  "tested_identity": {
+    "ro.product.device": "martin",
+    "ro.board.platform": "mt5867",
+    "ro.build.version.sdk": "34",
+    "ro.product.manufacturer": "Expressluck"
+  },
+  "tested_fingerprint": "Grunkel/Grunkel_2K_ATV2/martin:14/UKNV.260602.001/15547440:user/release-keys",
+  "required_packages": [
+    "com.conreo.couchytv",
+    "com.netflix.ninja",
+    "com.mediatek.wwtv.tvcenter"
+  ],
+  "protected_packages": [
+    "android",
+    "com.android.systemui",
+    "com.android.tv.settings",
+    "com.android.providers.settings",
+    "com.google.android.gms",
+    "com.google.android.gsf",
+    "com.google.android.apps.mediashell",
+    "com.google.android.webview",
+    "com.android.vending",
+    "com.mediatek.tv.service",
+    "com.mediatek.tvinput",
+    "com.google.android.permissioncontroller",
+    "com.netflix.ninja",
+    "com.google.android.tv.remote.service",
+    "com.google.android.inputmethod.latin",
+    "com.mediatek.androidbox",
+    "com.mediatek.wwtv.tvcenter",
+    "com.google.android.youtube.tv",
+    "com.mediatek.wwtv.mediaplayer",
+    "com.google.android.packageinstaller",
+    "org.d9911.grunkel.photos",
+    "com.conreo.couchytv"
+  ],
+  "disable_packages": {
+    "com.google.android.feedback": "Optional Google feedback application",
+    "com.android.tv.feedbackconsent": "Optional TV feedback consent UI",
+    "com.google.android.tvrecommendations": "Recommendations for the unused stock launcher",
+    "com.google.android.play.games": "Unrequested game service UI",
+    "com.google.android.youtube.tvmusic": "Unrequested music application",
+    "com.google.android.videos": "Unrequested Google TV movie application",
+    "com.amazon.amazonvideo.livingroom": "Unrequested Prime Video application",
+    "fusion.android.tv.demo": "Retail demo application",
+    "com.google.android.katniss": "Optional Google voice assistant; removes assistant voice search",
+    "com.google.android.backdrop": "Unused Google photo screensaver; optional offline Grunkel Photos is configured separately",
+    "com.cltv.fast": "Unrequested bundled FAST TV application",
+    "com.android.federatedcompute.services": "Optional federated computation service",
+    "com.android.ondevicepersonalization.services": "Optional on-device personalization service"
+  },
+  "settings": [
+    {
+      "namespace": "secure",
+      "key": "send_action_app_error",
+      "value": "0",
+      "reason": "Disable optional application error-report action"
+    },
+    {
+      "namespace": "global",
+      "key": "window_animation_scale",
+      "value": "0.5",
+      "reason": "Short window animations"
+    },
+    {
+      "namespace": "global",
+      "key": "transition_animation_scale",
+      "value": "0.5",
+      "reason": "Short transition animations"
+    },
+    {
+      "namespace": "global",
+      "key": "animator_duration_scale",
+      "value": "0.5",
+      "reason": "Short property animations"
+    },
+    {
+      "namespace": "global",
+      "key": "auto_time",
+      "value": "1",
+      "reason": "Network-synchronized date and time"
+    },
+    {
+      "namespace": "system",
+      "key": "time_12_24",
+      "value": "24",
+      "reason": "Compact 24-hour clock"
+    }
+  ],
+  "limitations": [
+    "A matching retail model name does not establish hardware compatibility.",
+    "The profile reduces optional software; it does not prove zero telemetry.",
+    "Native vendor ACR services and encrypted network traffic have not been comprehensively audited.",
+    "Google Cast, DRM, the app store, WebView and system updates are retained.",
+    "No firmware image, bootloader unlock, root, factory reset or partition write is included.",
+    "Languages are available for selection; extra OS translation resources are not removed."
+  ],
+  "home_launcher": "couchy"
+}

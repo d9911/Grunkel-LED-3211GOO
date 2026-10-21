@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<resources>
+ <string name="app_name">Entradas · HDMI / AV</string>
+ <string name="unsupported">Este acceso es para el firmware Grunkel probado.</string>
+ <string name="inputs_error">No se pudo abrir el selector nativo. Usa INPUT / SOURCE del mando.</string>
+ <string name="back">Volver</string>
+ <string name="help">↑ / ↓ elegir · OK abrir · BACK volver</string>
+ <string name="connected">Unidad extraíble conectada</string>
+ <string name="absent">No hay unidad extraíble conectada. Conecta un USB y espera a que Android lo monte.</string>
+ <string name="browse">Explorar archivos USB</string>
+ <string name="photos">Fotos y carpeta de presentación</string>
+ <string name="refresh">Actualizar</string>
+ <string name="media_error">El explorador no está disponible. No se cambiaron archivos ni ajustes.</string>
+ <string name="inputs_hint">Elige una entrada física. Android indica el estado; no confirma que haya imagen.</string>
+ <string name="input_connected">Conectado</string>
+ <string name="input_disconnected">Sin conexión indicada</string>
+ <string name="input_standby">En espera</string>
+ <string name="input_unknown">Estado desconocido</string>
+</resources>

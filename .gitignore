@@ -1,0 +1,42 @@
+.DS_Store
+tools/
+downloads/
+metadata/
+sources/
+diagnostics/
+screenshots/
+# Only these reviewed captures belong in Git; all other screenshots stay private.
+!assets/screenshots/
+assets/screenshots/*
+!assets/screenshots/home-es.png
+backups/
+reference/
+exports/
+device.json
+device.local.json
+state.json
+playlists/*.local.*
+__pycache__/
+*.pyc
+adbkey*
+.android/
+# Earlier owner-specific helpers are intentionally not part of the public toolkit.
+scripts/adb.sh
+scripts/tv.py
+scripts/restore-stock.sh
+
+# Remote laptop details and credentials must never be published.
+remote.local.json
+remote.*.local.json
+
+
+# Per-TV launcher choice; serial/fingerprint remain private.
+launcher.local.json
+launcher.local.json.tmp
+
+!assets/screenshots/couchy-satin-es.png
+
+
+# All per-owner configuration/exports are private, regardless of their stem.
+*.local.json
+*.local.json.tmp

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="320dp" android:height="180dp" android:viewportWidth="320" android:viewportHeight="180">
+ <path android:fillColor="#775234" android:pathData="M0,0h320v180H0Z" />
+ <path android:fillColor="#F4F4ED" android:pathData="M88,58h11v11h-11ZM114,58h11v11h-11ZM88,71h11v11h-11ZM114,71h11v11h-11ZM88,84h11v11h-11ZM114,84h11v11h-11ZM88,97h11v11h-11ZM114,97h11v11h-11ZM88,110h11v11h-11ZM101,110h11v11h-11ZM114,110h11v11h-11ZM140,58h11v11h-11ZM153,58h11v11h-11ZM166,58h11v11h-11ZM140,71h11v11h-11ZM140,84h11v11h-11ZM153,84h11v11h-11ZM166,84h11v11h-11ZM166,97h11v11h-11ZM140,110h11v11h-11ZM153,110h11v11h-11ZM166,110h11v11h-11ZM192,58h11v11h-11ZM205,58h11v11h-11ZM192,71h11v11h-11ZM218,71h11v11h-11ZM192,84h11v11h-11ZM205,84h11v11h-11ZM192,97h11v11h-11ZM218,97h11v11h-11ZM192,110h11v11h-11ZM205,110h11v11h-11Z" />
+</vector>

@@ -1,0 +1,29 @@
+{
+  "scope": "Pinned macOS arm64 JDK + Android SDK command-line build tools; binaries stay private under tools/",
+  "archives": [
+    {
+      "filename": "OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.12.1_1.tar.gz",
+      "url": "https://github.com/adoptium/temurin21-binaries/releases/download/jdk-21.0.12.1%2B1/OpenJDK21U-jdk_aarch64_mac_hotspot_21.0.12.1_1.tar.gz",
+      "sha256": "3623232f33a9c3baadf304480b2535f9a3cba8a58d42ecbb438ba267315d9998",
+      "directory": "jdk",
+      "provenance": "Adoptium release API SHA-256"
+    },
+    {
+      "filename": "platform-34-ext7_r02.zip",
+      "url": "https://dl.google.com/android/repository/platform-34-ext7_r02.zip",
+      "sha256": "5323311cc3e4ad614f0b8053c72b651726f3422448cedd39e48f00737cda8ad0",
+      "directory": "platform",
+      "provenance": "Official Google repository2-1.xml SHA-1 verified before recording SHA-256"
+    },
+    {
+      "filename": "build-tools_r35_macosx.zip",
+      "url": "https://dl.google.com/android/repository/build-tools_r35_macosx.zip",
+      "sha256": "530cdbd1ec315e1477624d7ed2f0f2962108d69f36eddba5894cef9ea2cedb48",
+      "directory": "build-tools",
+      "provenance": "Official Google repository2-1.xml SHA-1 verified before recording SHA-256"
+    }
+  ],
+  "java_home": "jdk/jdk-21.0.12.1+1/Contents/Home",
+  "platform_jar": "platform/android-34/android.jar",
+  "build_tools": "build-tools/android-15"
+}

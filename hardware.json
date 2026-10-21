@@ -1,0 +1,289 @@
+{
+  "schema": 1,
+  "observed_at": "2026-10-21",
+  "scope": "Observed facts for one unit; not an OEM specification sheet or a compatibility guarantee.",
+  "sources": {
+    "label": {
+      "type": "owner_supplied_rear_label_photo",
+      "public_raw_evidence": false,
+      "note": "Original photograph is private because it includes the unit barcode. Only printed model/electrical ratings are transcribed here."
+    },
+    "getprop": {
+      "type": "saved_adb_snapshot",
+      "command": "adb shell getprop",
+      "private_evidence": "diagnostics/initial/identity.txt"
+    },
+    "cpuinfo": {
+      "type": "saved_adb_snapshot",
+      "command": "adb shell cat /proc/cpuinfo",
+      "private_evidence": "diagnostics/initial/system.txt"
+    },
+    "meminfo": {
+      "type": "saved_adb_snapshot",
+      "command": "adb shell cat /proc/meminfo",
+      "private_evidence": "diagnostics/initial/identity.txt"
+    },
+    "storage": {
+      "type": "saved_adb_snapshot",
+      "command": "adb shell df -h /data/user/0",
+      "private_evidence": "diagnostics/initial/identity.txt"
+    },
+    "capture": {
+      "type": "saved_adb_screencap_png_header",
+      "command": "adb exec-out screencap -p",
+      "private_evidence": "screenshots/20261021-004853+0300-8ebd31.png",
+      "note": "PNG IHDR width/height; this does not establish native panel resolution."
+    },
+    "tv-inputs": {
+      "type": "saved_adb_tv_input_snapshot",
+      "command": "adb shell dumpsys tv_input",
+      "private_evidence": "diagnostics/20261021-012935+0300-499e4d-tv-inputs.txt"
+    },
+    "av-session": {
+      "type": "saved_adb_session_after_source_selection",
+      "command": "adb shell dumpsys tv_input",
+      "private_evidence": "diagnostics/20261021-013235+0300-cc5f99-selected-combined-input.txt",
+      "note": "Selected the native source labelled Комбинированный; sessionStateMap then identified the composite input."
+    },
+    "owner-hdmi-follow-up": {
+      "type": "owner_chat_report",
+      "date": "2026-10-21",
+      "note": "Owner said HDMI 2/3 were checked and HDMI 1 was now connected; assistant did not independently confirm a new external picture."
+    },
+    "runtime-storage": {
+      "type": "fresh_guarded_adb_read_only",
+      "observed_at": "2026-10-21T11:40:53.872911+03:00",
+      "command": "python3 scripts/grunkel.py storage / make storage",
+      "private_evidence": "diagnostics/storage-audit-20261021-112011+0300-dd3d5d/storage-live.json"
+    },
+    "cpu-frequency": {
+      "type": "fresh_guarded_sysfs_read",
+      "command": "adb shell cat /sys/devices/system/cpu/cpufreq/policy0/{cpuinfo_min_freq,cpuinfo_max_freq,scaling_max_freq,scaling_available_frequencies}",
+      "private_evidence": "diagnostics/storage-audit-20261021-112011+0300-dd3d5d/cpu-policy.txt"
+    },
+    "display-runtime": {
+      "type": "fresh_guarded_dumpsys",
+      "command": "adb shell dumpsys display",
+      "private_evidence": "diagnostics/storage-audit-20261021-112011+0300-dd3d5d/display.txt"
+    },
+    "properties-runtime": {
+      "type": "fresh_guarded_selected_getprop",
+      "private_evidence": "diagnostics/storage-audit-20261021-112011+0300-dd3d5d/properties.json"
+    }
+  },
+  "facts": {
+    "brand": {
+      "value": "Grunkel",
+      "source": "label"
+    },
+    "retail_model": {
+      "value": "LED-3211GOO",
+      "source": "label"
+    },
+    "screen": {
+      "diagonal_in": 32,
+      "type_as_printed": "LED TV",
+      "source": "label"
+    },
+    "power_input": {
+      "voltage_ac_min_v": 100,
+      "voltage_ac_max_v": 240,
+      "frequency_hz": [
+        50,
+        60
+      ],
+      "source": "label"
+    },
+    "rated_consumption": {
+      "value_w": 56,
+      "source": "label",
+      "note": "Printed rating, not measured consumption."
+    },
+    "usb_output": {
+      "voltage_v": 5,
+      "current_a": 0.5,
+      "source": "label"
+    },
+    "android_model": {
+      "value": "Grunkel 2K Android TV",
+      "property": "ro.product.model",
+      "source": "getprop"
+    },
+    "reported_manufacturer": {
+      "value": "Expressluck",
+      "property": "ro.product.manufacturer",
+      "source": "getprop"
+    },
+    "board": {
+      "value": "martin",
+      "property": "ro.product.board",
+      "source": "getprop"
+    },
+    "platform": {
+      "value": "mt5867",
+      "property": "ro.board.platform",
+      "source": "getprop"
+    },
+    "logical_processors": {
+      "ids": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "count": 4,
+      "calculation": "Count the four processor entries numbered 0 through 3.",
+      "source": "cpuinfo"
+    },
+    "android_version": {
+      "release": "14",
+      "sdk": 34,
+      "source": "getprop"
+    },
+    "android_abi": {
+      "primary": "armeabi-v7a",
+      "supported": [
+        "armeabi-v7a",
+        "armeabi"
+      ],
+      "userspace_bits": 32,
+      "source": "getprop",
+      "note": "Describes the installed Android application ABI, not the maximum CPU hardware capability."
+    },
+    "android_security_patch": {
+      "value": "2026-06-01",
+      "property": "ro.build.version.security_patch",
+      "source": "getprop",
+      "note": "Value reported by the tested build, not a claim that this is the latest available patch."
+    },
+    "ram": {
+      "MemTotal_KiB": 935352,
+      "MiB": 913.43,
+      "calculation": "935352 / 1024 = 913.4296875 MiB, rounded to 913.43 MiB",
+      "source": "meminfo",
+      "note": "Kernel-reported MemTotal; not a verified nominal installed RAM capacity."
+    },
+    "data_partition": {
+      "requested_mount": "/data",
+      "source": "runtime-storage",
+      "observed_at": "2026-10-21T11:40:53.872911+03:00",
+      "total_KiB": 4205976,
+      "used_KiB": 1551940,
+      "available_KiB": 2550860,
+      "total_GiB": 4.011,
+      "available_GiB": 2.433,
+      "available_percent": 60.65,
+      "calculation": "GiB = KiB / 1048576; available_percent = 100 * available_KiB / total_KiB",
+      "note": "Writable data partition, not nominal flash capacity. Available space is a point-in-time snapshot; df reserved/overhead means total is not necessarily used+available."
+    },
+    "captured_ui_size": {
+      "width_px": 1280,
+      "height_px": 720,
+      "source": "capture",
+      "note": "UI screenshot dimensions; native panel pixel count is unverified."
+    },
+    "boot_state": {
+      "vbmeta_device_state": "locked",
+      "verified_boot_state": "green",
+      "source": "getprop"
+    },
+    "registered_inputs": {
+      "hdmi": {
+        "HDMI 1": "com.mediatek.tvinput/.hdmi.HDMIInputService/HW5",
+        "HDMI 2": "com.mediatek.tvinput/.hdmi.HDMIInputService/HW6",
+        "HDMI 3": "com.mediatek.tvinput/.hdmi.HDMIInputService/HW7"
+      },
+      "tuners": [
+        "com.mediatek.tvinput/.tuner.TunerInputService/HW0",
+        "com.mediatek.tvinput/.tuner.TunerInputService/HW1"
+      ],
+      "source": "tv-inputs",
+      "note": "Registered service/input IDs, not proof of reception, connector testing or complete OEM hardware specifications.",
+      "owner_follow_up": {
+        "source": "owner-hdmi-follow-up",
+        "HDMI 1": "Owner reports connected; actual signal picture unconfirmed",
+        "HDMI 2": "Checked according to owner",
+        "HDMI 3": "Checked according to owner"
+      }
+    },
+    "av_source": {
+      "native_ru_label": "Комбинированный",
+      "selected_session_input": "com.mediatek.tvinput/.composite.CompositeInputService/HW2",
+      "source": "av-session",
+      "external_video_signal_tested": false
+    },
+    "available_memory_snapshot": {
+      "source": "runtime-storage",
+      "observed_at": "2026-10-21T11:40:53.872911+03:00",
+      "MemTotal_KiB": 935352,
+      "MemAvailable_KiB": 240228,
+      "SwapTotal_KiB": 716796,
+      "SwapFree_KiB": 340868,
+      "MemAvailable_MiB": 234.6,
+      "SwapTotal_MiB": 700.0,
+      "calculation": "MiB = KiB / 1024; SwapTotal is virtual swap capacity, not extra physical RAM. MemAvailable changes with activity."
+    },
+    "cpu_frequency_policy": {
+      "source": "cpu-frequency",
+      "policy": "policy0",
+      "cpuinfo_min_kHz": 750000,
+      "cpuinfo_max_kHz": 1500000,
+      "scaling_max_kHz": 1450000,
+      "available_kHz": [
+        750000,
+        1100000,
+        1350000,
+        1450000,
+        1500000
+      ],
+      "calculation": "GHz = kHz / 1000000; min 0.75, policy hardware maximum 1.5, current scaling cap 1.45 GHz.",
+      "note": "Kernel-reported policy limits, not a manufacturer CPU specification or benchmark; frequencies were not changed."
+    },
+    "reported_display_mode": {
+      "source": "display-runtime",
+      "width_px": 1280,
+      "height_px": 720,
+      "refresh_hz_as_reported": 60.000004,
+      "refresh_hz_rounded": 60,
+      "note": "Android INTERNAL display device/default mode. This is stronger than screenshot dimensions but still not an independent panel/EDID measurement or OEM native-panel specification."
+    },
+    "low_ram_mode": {
+      "source": "properties-runtime",
+      "property": "ro.config.low_ram",
+      "value": "true",
+      "note": "Already set by the factory build; toolkit did not add RAM or enable this flag."
+    },
+    "current_language_timezone": {
+      "source": "properties-runtime",
+      "language": "es-ES",
+      "timezone": "Europe/Madrid",
+      "factory_reset_default_verified": false
+    },
+    "firmware_mounts": {
+      "source": "runtime-storage",
+      "mounts": {
+        "/": {
+          "filesystem": "ext4",
+          "read_only": true
+        },
+        "/vendor": {
+          "filesystem": "ext4",
+          "read_only": true
+        },
+        "/product": {
+          "filesystem": "ext4",
+          "read_only": true
+        }
+      },
+      "note": "Read-only firmware capacity is separate from writable /data; disabling a package does not delete its APK."
+    }
+  },
+  "not_established": [
+    "Native panel resolution",
+    "Total flash chip capacity",
+    "Nominal installed RAM capacity",
+    "Manufacturer nominal CPU clock specification (kernel frequency policy recorded separately)",
+    "Wi-Fi and Bluetooth versions",
+    "Full compatibility across all units sold with the same retail model name"
+  ]
+}

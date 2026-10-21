@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<resources>
+ <string name="app_name">Входы · HDMI / AV</string>
+ <string name="unsupported">Ярлык предназначен для проверенной прошивки Grunkel.</string>
+ <string name="inputs_error">Штатный выбор входов недоступен. Нажми INPUT / SOURCE на пульте.</string>
+ <string name="back">Назад</string>
+ <string name="help">↑ / ↓ выбрать · OK открыть · BACK назад</string>
+ <string name="connected">Съёмный накопитель подключён</string>
+ <string name="absent">Съёмный накопитель не подключён. Подключи флешку и дождись её подключения Android.</string>
+ <string name="browse">Открыть файлы USB</string>
+ <string name="photos">Фото и папка фотозаставки</string>
+ <string name="refresh">Обновить</string>
+ <string name="media_error">Просмотрщик недоступен. Файлы и настройки не изменены.</string>
+ <string name="inputs_hint">Выбери физический вход. Состояние сообщает Android; оно не подтверждает наличие изображения.</string>
+ <string name="input_connected">Подключён</string>
+ <string name="input_disconnected">Подключение не обнаружено</string>
+ <string name="input_standby">Ожидание</string>
+ <string name="input_unknown">Состояние неизвестно</string>
+</resources>

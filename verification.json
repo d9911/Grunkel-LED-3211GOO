@@ -1,0 +1,367 @@
+{
+  "schema": 2,
+  "toolkit_version": "1.0.0",
+  "observed_at": "2026-10-21",
+  "scope": "Recorded observations for one owner-authorized TV; this release-preparation pass is local/offline and does not reconfigure the TV.",
+  "tested_identity": {
+    "ro.product.device": "martin",
+    "ro.board.platform": "mt5867",
+    "ro.build.version.sdk": "34",
+    "ro.product.manufacturer": "Expressluck"
+  },
+  "tested_fingerprint": "Grunkel/Grunkel_2K_ATV2/martin:14/UKNV.260602.001/15547440:user/release-keys",
+  "hardware_specifications": "hardware.json",
+  "current": {
+    "home_launcher": "couchy",
+    "home_component": "com.conreo.couchytv/.MainActivity",
+    "launcher_version": "1.0.6",
+    "system_locale": "es-ES",
+    "launcher_locale": "es",
+    "clock_24h": true,
+    "timezone": "Europe/Madrid",
+    "timezone_changed": false,
+    "wallpaper": "img/satin-teal-copper.jpg",
+    "wallpaper_internal_not_usb": true,
+    "layout": "Dock",
+    "icon_scale": 0,
+    "home_cards": [
+      "Netflix",
+      "AirPlay Server",
+      "Live TV",
+      "OpenTV",
+      "SmartTube F-Droid",
+      "TV Bro",
+      "HDMI / AV",
+      "USB / Files"
+    ],
+    "all_eight_visible": true,
+    "base_third_party_apps": 5,
+    "native_netflix_live_tv_cast_retained": true
+  },
+  "checks": {
+    "latest_live_verify": {
+      "status": "passed",
+      "source": "Last guarded verify recorded in the same-device couchy-hdmi-usb private reserve",
+      "scope": "Profile/HOME/selected five installed APK hashes/APK-source default-off/photo policy and read permission; not actual playback/PIN/reset retention",
+      "new_local_prep_changed_tv": false
+    },
+    "profile_and_recovery": {
+      "status": "passed_live_apply_rollback_idempotence_home_selection",
+      "evidence": "Privacy apply/rollback/reapply and no-op reapply checked; HOME temporary switches and exact per-device local choice/absence restored before final owner selection. Original-value same-device journals retained. No uninstall/full app-data rollback implied.",
+      "drift": {
+        "status": "two_drifted_values_repaired_then_verify_passed",
+        "evidence": "After accelerated sleep and owner wake, read-only verify found com.cltv.fast enabled and secure send_action_app_error=1. Reviewed apply changed only these two values with an exact-original-value journal. Final read-only verify passed, including photo policy and both APK sources deny. Cause and restart persistence are not established.",
+        "latest_storage_audit": "This read-only verify found only secure send_action_app_error reset to 1. Journaled apply restored 0; subsequent full verify passed. Recurrent OEM change cause remains unproven; no automatic repair daemon added."
+      }
+    },
+    "projectivy": {
+      "version": "4.72",
+      "settings_languages_checked": [
+        "ru-RU",
+        "es-ES",
+        "en-US"
+      ],
+      "custom_wallpaper_and_themes": "Premium screen observed; not activated or bypassed",
+      "role": "Installed alternative; historical home-es.png retained"
+    },
+    "plume": {
+      "version": "1.3",
+      "settings_language": "English only",
+      "checked": [
+        "Former HOME",
+        "Static internal JPEG",
+        "Light/Dark themes",
+        "Six application cards",
+        "Native input popup via remote/CLI"
+      ],
+      "role": "Installed alternative, private data not cleared",
+      "private_app_data_backup_available": false,
+      "telemetry_limit": "Source includes daily GitHub update checks and optional IP weather; no zero-network claim"
+    },
+    "couchy": {
+      "version": "1.0.6",
+      "apk_pin_verified_on_tv": true,
+      "wallpaper": "Exact reviewed JPEG visibly rendered, copied into private internal app storage by normal picker; no USB dependency.",
+      "languages": {
+        "ru": "Actual settings labels checked through native picker",
+        "es": "Startup and final actual settings/date checked; explicit Español selected",
+        "en": "Native per-app en-US and normal imported language=en each displayed English; per-app override restored to original empty",
+        "english_picker_item": false,
+        "full_translation_quality_audited": false,
+        "system_default_caveat": "After RU/EN trials, choosing system default left Russian date/UI despite es-ES system and empty native per-app locale; ordinary process relaunch did not resolve it. Explicit Español corrected the observed mismatch."
+      },
+      "native_json_import": "Passed through Material Files document picker; six apps and wallpaper retained",
+      "native_json_export": "Save configuration successfully wrote Download/CouchyBackup.json; valid 30-key JSON pulled privately; final Spanish export checked separately in final backup manifest.",
+      "temporary_home_rollback": "Couchy HOME verified, then exact original Plume HOME and originally absent local selection restored before final owner choice",
+      "final_home": "Explicit owner chose Couchy; HOME and saved serial/fingerprint selection verified",
+      "input_selector": "Native selector opened/closed without changing an input; no new external video signal test",
+      "light_dark_switch_verified": false,
+      "speedup_quantified": false,
+      "reboot_tested": false,
+      "factory_reset_tested": false
+    },
+    "material_files": {
+      "status": "installed_pinned_picker_passed",
+      "version": "1.7.5",
+      "included_in_default_five_apps": false,
+      "original_picker": "com.android.tv.frameworkpackagestubs/.Stubs$DocumentsStub",
+      "owner_authorized_shared_tv_and_attached_storage": true,
+      "all_files_mode": "allow",
+      "original_mode": "default",
+      "exact_mode_journal_and_rollback_fixture_passed": true,
+      "laptop_shares_connected": false,
+      "apk_install_requests": "deny",
+      "root_shizuku_notifications_granted": false,
+      "private_usb_files_changed": false
+    },
+    "usb_photo_screensaver": {
+      "package": "org.d9911.grunkel.photos",
+      "version": "0.2.0",
+      "source": "android/photos",
+      "build_script": "scripts/build-photos.py",
+      "permissions": [
+        "android.permission.READ_MEDIA_IMAGES",
+        "android.permission.READ_EXTERNAL_STORAGE (maxSdkVersion 32)"
+      ],
+      "network_permission_declared": false,
+      "production_settings": {
+        "secure.screensaver_components": "org.d9911.grunkel.photos/.PhotoDreamService",
+        "secure.screensaver_default_component": "org.d9911.grunkel.photos/.PhotoDreamService",
+        "secure.screensaver_enabled": "1",
+        "secure.screensaver_activate_on_sleep": "1",
+        "system.screen_off_timeout": "300000",
+        "secure.sleep_timeout": "1800000"
+      },
+      "timing_calculation": "idle=5*60*1000=300000 ms; total sleep=30*60*1000=1800000 ms; intended photo session=(30-5)=25 minutes; image interval=30*1000=30000 ms",
+      "image_interval_ms": 30000,
+      "candidate_limit": 1000,
+      "decode_max_px": [
+        1280,
+        720
+      ],
+      "remote_ui_evidence": {
+        "usb_destination_hashes_match": true,
+        "saved_message_visible": true,
+        "back_root_to_drives": true,
+        "back_drives_to_home": true,
+        "first_blue": true,
+        "changed_after_30_seconds_skipping_corrupt_jpg": true,
+        "ok_pauses": true,
+        "pause_survives_interval": true,
+        "right_wraps_to_blue": true,
+        "left_skips_corrupt_back_to_red": true,
+        "ok_resumes": true,
+        "back_preview_to_picker": true,
+        "original_folder_restored": true
+      },
+      "languages": {
+        "es-ES": true,
+        "en-US": true,
+        "ru-RU": true
+      },
+      "original_app_locale_restored": true,
+      "full_30_minute_cycle_tested": false,
+      "physical_exit_key_tested": false,
+      "reboot_persistence_tested": false,
+      "signing_material": "Private ignored tools/photo-signing preserved for signed updates; no keys/images/APKs in public archive.",
+      "image_rendering": "Owner confirmed actual USB photos visible; interval, corrupt skip, pause and wrap verified. Native MediaTek fullscreen rendering is a separate unconfirmed path.",
+      "manual_preview": "Holds awake until closed; not the automatic 25-minute session.",
+      "own_picker_physical_event_tested": false,
+      "saved_folder_after_usb_helper_reinsertion_available": true
+    },
+    "home_input_usb_shortcuts": {
+      "status": "installed_home_layout_and_live_routes_passed",
+      "version": "0.1.0",
+      "packages": [
+        "org.d9911.grunkel.inputs",
+        "org.d9911.grunkel.usb"
+      ],
+      "requested_permissions": [],
+      "apk_integrity": "Local signing certificates, aapt2 package/zero-permission checks and both installed SHA-256 values verified",
+      "layout": "Original six cards retained in the same order; HDMI and USB appended; XS (iconScale=0) makes all eight visible without scrolling; custom JPEG/clock/date retained",
+      "input_list": "TvInputManager returned the registered HDMI1/HW5, HDMI2/HW6, HDMI3/HW7 and AV/HW2 sources; exact reviewed device IDs only",
+      "selection_tested": [
+        "HDMI 1"
+      ],
+      "selection_evidence": "Pressing OK in original Inputs helper opened factory TV and created an active tv_input session for HDMIInputService/HW5. External picture unverified; HDMI2/3/AV not newly selected in this check.",
+      "initial_oem_panel_trial": "com.android.tv.action.VIEW_INPUTS launched InputsPanelActivity but no usable list was observed; not used in final code",
+      "usb_connected_browser": "With one mounted removable drive, browse/photo controls enabled. Browse USB files opened com.mediatek.wwtv.mediaplayer foreground; no file opened or media playback started.",
+      "physical_usb_removal": {
+        "owner_removed": true,
+        "android_availability": "absent",
+        "page_updated_without_manual_refresh": true,
+        "browse_and_photo_controls_disabled": true
+      },
+      "physical_usb_reinsertion": {
+        "owner_reinserted": true,
+        "android_availability": "ready",
+        "visible_page_updated_without_manual_refresh": true,
+        "browse_and_photo_controls_enabled": true,
+        "previous_photo_folder_available": true,
+        "photo_interval_ms": 30000,
+        "idle_ms": 300000,
+        "sleep_after_total_ms": 1800000
+      },
+      "home_usb_tile_changes_color": false,
+      "dynamic_state_scope": "Inside USB page only; HOME USB card remains present",
+      "photo_folder_changed": false,
+      "photo_timers_changed": false,
+      "usb_files_written": false,
+      "files_deleted": false,
+      "services_added": false,
+      "network_permission": false,
+      "volume": "Muted, <=1/100; never increased",
+      "local_checks": "Temporary isolated install/idempotence/corrupt-second-artifact-before-mutation and real make -j8 build/install/failure ordering checks passed. Existing launcher variants/five-app verification and base/photo Make orchestration passed. No permanent tests added.",
+      "sources": [
+        "https://developer.android.com/reference/android/media/tv/TvInputManager",
+        "https://developer.android.com/reference/android/media/tv/TvContract"
+      ],
+      "final_read_only_verify_ok": true,
+      "updated_private_reserve": {
+        "path_pattern": "backups/*-couchy-hdmi-usb.zip",
+        "sha256_files": 12,
+        "zip_crc_and_byte_parity": true,
+        "includes": "Exact native eight-card Couchy JSON, original JPEG, both shortcut APKs/private signing material, local profile/selection/locks and final verified state",
+        "published": false
+      }
+    },
+    "smarttube": {
+      "status": "playback_passed_without_login",
+      "evidence": "Public Big Buck Bunny video displayed; media_session reported PLAYING with no error; no Google account added"
+    },
+    "netflix": {
+      "status": "launch_passed_playback_unverified",
+      "evidence": "Existing factory app launches; no Netflix credentials entered"
+    },
+    "browser": {
+      "status": "website_and_home_shortcut_passed",
+      "evidence": "TV Bro 2.1.6 APK SHA-256 matched the pin; Wikipedia displayed on a fresh launch. Browser remains in the Grunkel app row and in the default five-app installer."
+    },
+    "iptv": {
+      "status": "passed_one_channel",
+      "evidence": "OpenTV loaded TDTChannels M3U8 and displayed La 1 video; not all channels/languages tested"
+    },
+    "iphone_mirroring": {
+      "status": "owner_confirmed",
+      "evidence": "Owner explicitly reported that the TV appeared and the image was transmitted; mDNS service also observed locally"
+    },
+    "android_casting": {
+      "status": "youtube_cast_owner_confirmed_full_screen_unverified",
+      "evidence": "Owner reported YouTube casting from Redmi 15C working. This establishes application casting, not full Android screen mirroring."
+    },
+    "native_media": {
+      "status": "browser_and_thumbnails_passed_fullscreen_picture_unconfirmed",
+      "evidence": "Native browser showed drives/folders/thumbnails. Fullscreen native photo/video ADB areas were black; on-TV native picture/audio was not confirmed. No protected-surface cause inferred. Original Photos app rendering was independently confirmed."
+    },
+    "zero_telemetry": {
+      "status": "not_established",
+      "evidence": "Optional feedback/personalization packages disabled; native init.svc.acrservice still running; consent state inconclusive"
+    },
+    "speedup": {
+      "status": "not_quantified",
+      "evidence": "No controlled timing comparison. Last after snapshot ended on AirPlay rather than HOME, so before/after idle comparison is invalid; improved perf helper now checks resumed activity before/after sampling."
+    },
+    "remote_laptop_access": {
+      "status": "local_live_screen_hid_mouse_keyboard_owner_confirmed",
+      "scrcpy_version": "5.0.1",
+      "picture_owner_confirmed": true,
+      "sdk_input_owner_confirmed": false,
+      "hid_control_owner_confirmed": true,
+      "screen_default_input": "uhid",
+      "cross_site_ssh_tested": false,
+      "cross_site_desktop_tested": false,
+      "physical_usb_bluetooth_peripherals_tested": false,
+      "remote_desktop_agent_installed": false,
+      "unattended_access_enabled": false,
+      "adb_public_port_enabled": false,
+      "audio_forwarding": false
+    },
+    "private_reserves": {
+      "pre_couchy_plume": {
+        "status": "saved_and_verified_privately",
+        "files": 15,
+        "checks": "Every SHA-256 plus ZIP CRC and byte parity",
+        "public_path_pattern": "backups/*-plume-before-couchy.zip",
+        "contains": "Pinned APKs, toolkit/configuration snapshot, current screenshot and recovery notes",
+        "full_firmware_or_private_plume_data_image": false,
+        "original_plume_app_data_retained_on_tv": true
+      },
+      "final_sources": {
+        "path_pattern": "backups/*-couchy-hdmi-usb.zip",
+        "sha256_files": 12,
+        "zip_crc_and_byte_parity": true,
+        "includes": "Exact native eight-card Couchy JSON, original JPEG, both shortcut APKs/private signing material, local profile/selection/locks and final verified state",
+        "published": false
+      },
+      "pre_cleanup": "Private *-before-stable-cleanup.zip preserves all 52 prior public files, full previous evidence/AGENTS and removed public images; hashes/ZIP verified. Not exported."
+    },
+    "release_preparation": {
+      "status": "passed_offline",
+      "upstream_launcher_release_redirects_checked_on": "2026-10-21",
+      "latest_match_tested_pins": [
+        "couchy 1.0.6",
+        "projectivy 4.72",
+        "plume 1.3"
+      ],
+      "all_other_upstream_apps_latest_checked": false,
+      "tv_settings_changed": false,
+      "git_remote_configured": false,
+      "commits_created": false,
+      "git_index_modified": false,
+      "validation_command": "make check",
+      "public_files": 53,
+      "public_images": {
+        "png": 2,
+        "jpeg": 1
+      },
+      "checked": "Python/JSON/XML; 13 matching EN/ES/RU anchors and local links; official launcher APK URLs; exact image SHA-256; locale-key parity; profile guards; private-data-aware ZIP CRC/byte parity",
+      "clean_public_only_tree_validated": true,
+      "negative_checks": "Corrupt image, broken local link, private network address and extra screenshot refused in temporary public-only copies",
+      "launcher_initialization_examples": "All nine install/menu/configure commands for Couchy/Projectivy/Plume exercised through real make -j8 with an isolated command recorder, not live TV installation",
+      "existing_behavior_checks": "Launcher selection/precedence/idempotence/rollback; selected-five-only verification; shortcut install/failure-stop; base/photo Make ordering; HID/SSH guards; installer/file-access app-op rollback",
+      "git_index_preserved_byte_for_byte": true,
+      "historical_home_es_preserved_byte_for_byte": true,
+      "tests_added": false,
+      "private_raw_photos_deleted": false
+    }
+  },
+  "language_and_reset_policy": {
+    "requested_factory_reset_default": "es-ES",
+    "implemented": false,
+    "factory_reset_tested": false,
+    "factory_reset_default_verified": false,
+    "current_system_locales": "es-ES",
+    "current_persistent_locale": "es-ES",
+    "factory_read_only_property": "en-US",
+    "system_picker_verified": [
+      "ru-RU",
+      "es-ES",
+      "en-US"
+    ],
+    "kernel_modified": false,
+    "partitions_written": false,
+    "bootloader": "locked",
+    "verified_boot": "green",
+    "device_admin_feature": false,
+    "device_policy_has_feature": false,
+    "note": "Read-only factory locale is not proof of the OEM first-run wizard choice after reset. Current language changes do not set factory-reset defaults."
+  },
+  "limitations": [
+    "Only exact recorded board/build tested; retail model name is not a compatibility guarantee.",
+    "No firmware/root/unlock/reset/partition write. Factory-reset Spanish default not implemented; read-only factory locale reports en-US.",
+    "Full production 30-minute photo/sleep cycle and reboot/factory-reset retention not tested.",
+    "Netflix account playback, full Android mirroring, physical USB/Bluetooth keyboard/mouse and cross-site desktop/SSH unverified.",
+    "No permanent-speedup or zero-telemetry claim. Native vendor ACR remained running.",
+    "HOME USB tile stays visible; only controls in its page turn grey when a drive is absent.",
+    "Connected/standby TV input status and an active input session do not independently prove external video picture."
+  ],
+  "evidence_privacy": "Exactly two unedited public PNGs plus one reusable JPEG, explicit path/SHA-256 whitelist. Owner media, package inventories, addressing, raw logs, APKs, signing/ADB keys and reserves remain private.",
+  "upstreams": {
+    "projectivy": "https://github.com/spocky/miproja1",
+    "smarttube": "https://f-droid.org/packages/app.smarttube.fdroid/",
+    "opentv": "https://github.com/opentvproject/opentv",
+    "airplay": "https://github.com/jqssun/android-airplay-server",
+    "channels": "https://www.tdtchannels.com/listas/"
+  },
+  "suggested_commit_title": "feat: add Grunkel LED-3211GOO setup with USB photos and three launchers"
+}

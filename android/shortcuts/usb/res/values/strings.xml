@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: GPL-3.0-or-later -->
+<resources>
+ <string name="app_name">USB · Files</string>
+ <string name="unsupported">This shortcut is intended for the tested Grunkel firmware.</string>
+ <string name="inputs_error">The native input selector could not be opened. Use INPUT / SOURCE on the remote.</string>
+ <string name="back">Back</string>
+ <string name="help">↑ / ↓ select · OK open · BACK return</string>
+ <string name="connected">Removable storage connected</string>
+ <string name="absent">No removable storage connected. Connect a USB drive and wait for Android to mount it.</string>
+ <string name="browse">Browse USB files</string>
+ <string name="photos">Photos and slideshow folder</string>
+ <string name="refresh">Refresh</string>
+ <string name="media_error">The media browser is unavailable. No files or settings were changed.</string>
+ <string name="inputs_hint">Choose a physical input. Connection status is reported by Android; it does not prove a video signal.</string>
+ <string name="input_connected">Connected</string>
+ <string name="input_disconnected">No connection reported</string>
+ <string name="input_standby">Standby</string>
+ <string name="input_unknown">Status unknown</string>
+</resources>

@@ -1,0 +1,94 @@
+{
+  "observed_at": "2026-10-21",
+  "home_launcher": {
+    "name": "Couchy",
+    "version": "1.0.6",
+    "component": "com.conreo.couchytv/.MainActivity",
+    "settings_language": "es",
+    "system_locale": "es-ES"
+  },
+  "screenshots": [
+    {
+      "file": "assets/screenshots/couchy-satin-es.png",
+      "captured_tv_local_time": "13:29",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "subject": "Actual Couchy HOME with eight visible cards: six preserved apps plus HDMI and USB; static JPEG, Spanish date/clock",
+      "pixel_edits": false
+    },
+    {
+      "file": "assets/screenshots/home-es.png",
+      "captured_tv_local_time": "11:07",
+      "dimensions_px": [
+        1280,
+        720
+      ],
+      "subject": "Actual Projectivy HOME with five app cards, physical inputs and clock/date",
+      "pixel_edits": false,
+      "historical": true
+    }
+  ],
+  "layout": {
+    "home_cards": [
+      "Netflix",
+      "AirPlay Server",
+      "Live TV",
+      "OpenTV",
+      "SmartTube F-Droid",
+      "TV Bro",
+      "HDMI / AV",
+      "USB / Files"
+    ],
+    "native_inputs": "HDMI card opens original input chooser; public TvInputManager list + typed TV VIEW intent to factory TV. Remote INPUT/SOURCE remains available.",
+    "style": "Dock",
+    "icon_scale": 0,
+    "all_eight_visible_without_scrolling": true,
+    "usb": "Persistent HOME card; dynamic mounted/absent state and disabled browse/photo controls inside USB page.",
+    "automated_by_make_configure": false
+  },
+  "active_background": {
+    "source": "Couchy local JPEG wallpaper",
+    "custom_image_applied": true,
+    "usb_required": false,
+    "video_wallpaper": false,
+    "builtin_aerials": false,
+    "light_dark_switch_verified": false
+  },
+  "optional_wallpaper": {
+    "file": "img/satin-teal-copper.jpg",
+    "dimensions_px": [
+      1672,
+      941
+    ],
+    "bytes": 86209,
+    "provenance": "Original abstract project artwork generated with OpenAI image generation; reusable JPEG retained at its original reviewed bytes.",
+    "applied": true,
+    "reason": "Selected in Couchy and earlier Plume; Projectivy custom image remained Premium-only.",
+    "last_review": "Current 86209-byte artwork visibly rendered by Couchy from internal app storage; no USB writes."
+  },
+  "review": {
+    "method": "Both complete public PNGs visually reviewed previously, unchanged bytes/no pixel edits. Original historical home-es.png retained verbatim; extra captures removed from public tree after a private verified reserve.",
+    "usb_files_changed": false,
+    "saved_photo_folder_changed": false,
+    "photo_timers_changed": false,
+    "firmware_changed": false,
+    "speedup_measured": false,
+    "third_party_rights": "Application UI, icons and trademarks retain their respective owners and licenses."
+  },
+  "sha256": {
+    "assets/screenshots/couchy-satin-es.png": "5d13ee059014fe8a98a06f32a72736a4dd4b689be15ccbd0238b7141f960327b",
+    "assets/screenshots/home-es.png": "3689ff99021ed432c573073329cbfdc80247c180e1976b938d906675eb88843c",
+    "img/satin-teal-copper.jpg": "7283ecf779399fd4b174ee0fd3af06addb366b7ee0dec419ba6f1433ce5576a3"
+  },
+  "public_cleanup": {
+    "kept_original_historical_home": true,
+    "raw_private_captures_deleted": false,
+    "redundant_public_pngs_removed": 3,
+    "image_bytes_before": 1239458,
+    "image_bytes_after": 730945,
+    "removed_bytes": 508513,
+    "note": "Historical claims remain in private pre-cleanup reserve; no removed image is needed to build/run the toolkit."
+  }
+}

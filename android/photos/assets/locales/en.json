@@ -1,0 +1,22 @@
+{
+  "title": "USB photo screensaver",
+  "info": "Choose a USB folder with the remote. Photos repeat every 30 seconds.\nAutomatic timing: 5 minutes idle, 25 minutes of photos, sleep at minute 30.",
+  "no_folder": "No available folder selected",
+  "photos": "photos",
+  "choose": "Choose USB folder",
+  "preview": "Preview photos",
+  "exit": "Close",
+  "choose_drive": "Choose removable storage",
+  "no_drive": "No readable USB drive is connected. Connect it and try again.",
+  "read_only": "Photos are read only. No file is changed, copied or deleted.",
+  "back": "Back",
+  "folder_only": "Only images directly in this folder",
+  "use_folder": "Use this folder",
+  "no_images": "No readable photos. Connect the drive or choose another folder.",
+  "navigation": "↑ ↓ Select   OK Open / confirm   BACK Previous screen   HOME TV menu",
+  "folder_navigation": "↑ ↓ Select   OK Open / use folder   ← / BACK Parent folder",
+  "preview_controls": "← / → Photo   OK Pause / resume   BACK Close",
+  "paused": "Paused",
+  "saved": "Folder saved. Preview is ready.",
+  "storage_changed": "USB changed. Choose an available drive."
+}

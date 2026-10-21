@@ -1,0 +1,7 @@
+{
+  "ssh_host": "tv-laptop",
+  "ssh_port": 22,
+  "project_directory": "/ABSOLUTE/PATH/Grunkel-LED-3211GOO",
+  "adb_serial": "EXACT_REMOTE_ADB_SERIAL",
+  "python": "python3"
+}

@@ -1,0 +1,22 @@
+{
+  "title": "Salvapantallas de fotos USB",
+  "info": "Elige una carpeta USB con el mando. Las fotos cambian cada 30 segundos.\nHorario automático: 5 minutos inactivo, 25 de fotos, reposo en el minuto 30.",
+  "no_folder": "No hay carpeta disponible seleccionada",
+  "photos": "fotos",
+  "choose": "Elegir carpeta USB",
+  "preview": "Vista previa de fotos",
+  "exit": "Cerrar",
+  "choose_drive": "Elegir almacenamiento extraíble",
+  "no_drive": "No hay unidad USB legible. Conéctala e inténtalo otra vez.",
+  "read_only": "Solo se leen las fotos. No se modifica, copia ni borra ningún archivo.",
+  "back": "Atrás",
+  "folder_only": "Solo imágenes directamente en esta carpeta",
+  "use_folder": "Usar esta carpeta",
+  "no_images": "No hay fotos legibles. Conecta la unidad o elige otra carpeta.",
+  "navigation": "↑ ↓ Elegir   OK Abrir / confirmar   BACK Pantalla anterior   HOME Menú TV",
+  "folder_navigation": "↑ ↓ Elegir   OK Abrir / usar carpeta   ← / BACK Carpeta superior",
+  "preview_controls": "← / → Foto   OK Pausa / continuar   BACK Cerrar",
+  "paused": "En pausa",
+  "saved": "Carpeta guardada. Vista previa disponible.",
+  "storage_changed": "El USB ha cambiado. Elige una unidad disponible."
+}
